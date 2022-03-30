@@ -1,0 +1,29 @@
+.footer-todos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .filter-status {
+        display: flex;
+        .filter-btn {
+            padding: 6px 8px;
+            color: rgb(54, 77, 211);
+            font-size: 14px;
+            border: none;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+        .active {
+            color: #f70707;
+            font-weight: 600ng;
+            // box-shadow: 4px 4px 8px #ccc;
+            border: 1px solid #f3eeee;
+            border-radius: 2px;
+        }
+    }
+    .count-item {
+        color: #020202;
+        font-size: 14px;
+        font-style: italic;
+    }
+}

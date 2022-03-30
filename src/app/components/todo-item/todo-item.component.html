@@ -1,0 +1,27 @@
+<div class="todo-item">
+    <div class="todo-item-wrapper">
+        <input type="checkbox" class="check-input" [checked]="todo.complete" [id]="todo.id" (change)="changeTodoStatus()" />
+        <label [for]="todo.id" class="name-todo" [ngClass]="{ checked: todo.complete }">{{todo.title}}</label
+    >
+  </div>
+  <div class="wrapper">
+    <fa-icon
+      [icon]="faEdit"
+      class="btnEdit"
+      (click)="isEditing = true"
+      [hidden]="todo.complete"
+    ></fa-icon>
+    <fa-icon
+      [icon]="faTrash"
+      class="btnDelete"
+      (click)="removeTodo()"></fa-icon>
+  </div>
+
+  <form
+    class="edit-form"
+    (keyup)="submitEdit($event)"
+    *ngIf="isEditing"
+  >
+    <input type="text" name="editTodo" [(ngModel)]="todo.title" />
+  </form>
+</div>

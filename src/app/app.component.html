@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="title content">{{ title }}</h1>
+    <div class="wrapper main-content">
+        <app-header></app-header>
+        <app-todos-list></app-todos-list>
+        <app-footer *ngIf="hasTodo$ | async"></app-footer>
+    </div>
+</div>

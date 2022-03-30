@@ -1,0 +1,62 @@
+@mixin displayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px #ddd;
+    padding: 12px 8px;
+    margin: 12px 0;
+    position: relative;
+    .todo-item-wrapper {
+        @include displayFlex();
+        margin-left: 12px;
+        cursor: pointer;
+        user-select: none;
+        .check-input {
+            width: 15px;
+            height: 15px;
+            border-radius: 40px;
+            border-width: 0 3px 3px 0;
+        }
+        .name-todo {
+            margin-left: 14px;
+            font-weight: 700;
+        }
+        .checked {
+            text-decoration: line-through;
+            color: #888;
+        }
+    }
+    .wrapper {
+        .btnEdit {
+            color: rgb(0, 113, 218);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .btnDelete {
+            color: rgb(0, 113, 218);
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 14px;
+        }
+    }
+    .edit-form {
+        position: absolute;
+        width: 98.5%;
+        height: 100%;
+        background: #fff;
+        & input {
+            height: 92%;
+            width: 92%;
+            margin-left: 35px;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+    }
+}

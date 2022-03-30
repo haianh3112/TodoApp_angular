@@ -1,0 +1,18 @@
+<div class="footer-todos">
+    <div class="filter-status">
+        <button class="filter-btn" *ngFor="let btn of filterButton" [ngClass]="{ active: btn.isActive }" (click)="filter(btn.type)">
+      {{ btn.label }}
+    </button>
+    </div>
+    <div class="count-item">
+        <ng-container *ngFor="let status of filterButton">
+            <span [ngSwitch]="status.type">
+        <span *ngSwitchCase="typeTodo">
+          {{ lengthFilter }}
+          {{ status.label === "All" ? "Active" : status.label }} item /
+          {{ length }} item{{ length > 1 ? "s" : "" }}</span>
+            </span>
+        </ng-container>
+    </div>
+
+</div>
