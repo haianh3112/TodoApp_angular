@@ -1,4 +1,4 @@
-# NccAngularTraining
+# Trainning Angular
 
 ## TODO App
 
